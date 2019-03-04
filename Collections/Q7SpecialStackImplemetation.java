@@ -1,5 +1,6 @@
 package com.ttnd.extra.Collections;
 
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -9,35 +10,27 @@ class Stack{
     int size=10;
 
     public void push(Integer i){
-        if(!isFull(this))
+        if(!isFull())
         list.add(i);
         else
             System.out.println("Stack Overflow");
     }
     public void pop(){
-        if(!isEmpty(this)){
+        if(!isEmpty()){
             System.out.println( this.list.get(list.size()-1));
             this.list.remove(list.size()-1);
         }
         else
             System.out.println("Stack Underflow");
     }
-    public boolean isEmpty(Stack stack){
+    public boolean isEmpty(){
         return list.isEmpty();
     }
-    public boolean isFull(Stack stack){
+    public boolean isFull(){
         return list.size()>=size;
     }
     public int getMin(Stack stack){
-        int min=Integer.MIN_VALUE;
-        Iterator iterator = stack.list.iterator();
-        while(iterator.hasNext()){
-            int i = (int)iterator.next();
-            if(min>i){
-                min = i;
-            }
-        }
-        return min;
+        return Collections.min(this.list);
     }
 
 }
