@@ -57,6 +57,7 @@ public class Q7SpecialStackImplemetation {
         stack.pop();
         stack.pop();
         stack.pop();
+        System.out.println( stack.getMin(stack));
 
     }
 }
