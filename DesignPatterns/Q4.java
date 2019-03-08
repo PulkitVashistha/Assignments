@@ -2,9 +2,9 @@ package com.ttnd.extra.DesignPatterns;
 
 class Student{
     private String name;
+    private String grade;
     private int id;
     private int age;
-    private String grade;
     private int rank;
     private String address;
     private String phoneNumber;

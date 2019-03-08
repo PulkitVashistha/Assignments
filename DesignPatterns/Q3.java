@@ -32,7 +32,7 @@ class MiniCar extends Car {
 }
 
 class IndianFactory{
-    static Car builtCar(String carType){
+    static Car buildCar(String carType){
         Car car = null;
         System.out.println("This is a Indian car.");
         if(carType.equals("Luxury")){
@@ -47,7 +47,7 @@ class IndianFactory{
     }
 }
 class USAFactory{
-    static Car builtCar(String carType){
+    static Car buildCar(String carType){
         Car car = null;
         System.out.println("This is a USA car.");
         if(carType.equals("Luxury")){
@@ -64,13 +64,13 @@ class USAFactory{
 }
 
 class CarFactory{
-    static Car builtCar(String carType, String location){
+    static Car buildCar(String carType, String location){
         Car car = null;
         if(location.equals("Indian")){
-            car = IndianFactory.builtCar(carType);
+            car = IndianFactory.buildCar(carType);
         }
         else{
-            car = USAFactory.builtCar(carType);
+            car = USAFactory.buildCar(carType);
         }
         return car;
     }
@@ -78,8 +78,8 @@ class CarFactory{
 
 public class Q3 {
     public static void main(String[] args) {
-        CarFactory.builtCar("Luxury", "Indian");
-        CarFactory.builtCar("Mini", "USA");
+        CarFactory.buildCar("Luxury", "Indian");
+        CarFactory.buildCar("Mini", "USA");
 
     }
 }

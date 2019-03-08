@@ -38,6 +38,7 @@ class SquareDemo extends Shape{
         return "Shape: "+shape+"\nColor: "+color.getColor();
     }
 }
+
 class TriangleDemo extends Shape{
     public TriangleDemo(String shape, Color color) {
         super(shape, color);
@@ -47,6 +48,7 @@ class TriangleDemo extends Shape{
         return "Shape: "+shape+"\nColor: "+color.getColor();
     }
 }
+
 public class Q5 {
     public static void main(String[] args) {
         SquareDemo squareDemo = new SquareDemo("Square", new Pink());
